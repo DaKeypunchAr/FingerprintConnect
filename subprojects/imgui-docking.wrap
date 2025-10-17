@@ -1,0 +1,13 @@
+[wrap-file]
+directory = imgui-1.92.3-docking
+source_url = https://github.com/ocornut/imgui/archive/refs/tags/v1.92.3-docking.tar.gz
+source_filename = imgui-docking-1.92.3.tar.gz
+source_hash = fd0f88fcc593faa4d536c02baded6abc85463b9deb2d75ee829fed6d5dd48e0e
+source_fallback_url = https://github.com/mesonbuild/wrapdb/releases/download/imgui-docking_1.92.3-3/imgui-docking-1.92.3.tar.gz
+patch_filename = imgui-docking_1.92.3-3_patch.zip
+patch_url = https://wrapdb.mesonbuild.com/v2/imgui-docking_1.92.3-3/get_patch
+patch_hash = 581f8c446654e0c832596c346d02c1015eb6ef73483ea097b5d1fda28051a03f
+wrapdb_version = 1.92.3-3
+
+[provide]
+dependency_names = imgui-docking
