@@ -4,9 +4,7 @@ wrapgl_dep = dependency('wrapgl', required: true)
 freetype_dep = dependency('freetype2', required: true)
 imgui_dep = dependency('imgui', required: true)
 
-sources = [
-  'main.cpp',
-]
+sources = ['main.cpp', 'src/font.cpp', 'src/font_atlas.cpp', 'src/text_renderer.cpp']
 
 executable(
   'main',
