@@ -7,7 +7,7 @@ FontAtlas FontAtlas::create(const Font &font, const unsigned int pixelSize) {
   font.setPixelSize(pixelSize);
   glm::uvec2 atlasDimension(0);
 
-  for (char c = 0; c < 127; c++) {
+  for (char c = 32; c < 127; c++) {
     // TODO: you are supposed to optimize the bottom line.
     GlyphInfo info = font.loadCharacter(c);
 
@@ -35,6 +35,7 @@ FontAtlas::FontAtlas(const glm::uvec2 atlasDimension, const Font &font)
       } else {
         m_Advance[i] = info.getAdvance();
         m_Bearing[i] = info.getBearing();
+        m_Dimension[i] = glm::vec2(0);
       }
       continue;
     }
@@ -93,4 +94,8 @@ glm::vec2 FontAtlas::getBearingForChar(const char ch) const {
 
   unsigned char c = ch - 32;
   return m_Bearing[c];
+}
+
+void FontAtlas::bindTextureAt(const unsigned int idx) const {
+  m_Texture.bind(idx);
 }

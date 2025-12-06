@@ -26,6 +26,7 @@ public:
   glm::vec2 getAdvanceForChar(const char c) const;
   glm::uvec2 getDimensionForChar(const char c) const;
   glm::vec2 getBearingForChar(const char c) const;
+  void bindTextureAt(const unsigned int idx) const;
 };
 
 #endif
